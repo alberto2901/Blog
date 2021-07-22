@@ -1,0 +1,18 @@
+<div class="box">
+    <div class="links">
+        <a routerLink="/posts">Post</a>
+    </div>
+
+    <div class="second-box">
+        <h2 class="title">POSTS</h2>   
+        <button routerLink="/posts/new" class="button">New Post</button>
+    </div>
+
+    <div [routerLink]="['/posts', post.id]" class="posts" *ngFor="let post of listPost">
+        <h2>{{post.title}}</h2>
+        <p>By: {{post.author}}</p>
+    </div>
+
+</div>
+
+
